@@ -45,4 +45,24 @@ include __DIR__ . '/includes/entete.php';
     <?php endif; ?>
 </section>
 
+<section class="formulaire">
+    <h2>AJOUTE UNE TACHHHHHE</h2>
+    <form action="ajoute.php" method="post">
+        <label for="titre">nom de tache</label>
+        <input type="text" name="titre" id="" placeholder="Titre de la tâche" require>
+
+        <label for="priorite">priorite</label>
+        <select name="priorite" id="">
+            <option value="haut">haut</option>
+            <option value="moyenne">moyenne</option>
+            <option value="bas">bas</option>
+        </select>
+
+        <div class=""lesbouton>
+            <button type="reset">reset</button>
+            <button type="submit">ajoute</button>
+        </div>
+    </form>
+</section>
+
 <?php include __DIR__ . '/includes/pied.php'; ?>
