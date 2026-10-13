@@ -4,6 +4,11 @@ require __DIR__ . '/donnees.php';
 require __DIR__ . '/fonctions.php';
 require __DIR__ . '/connexion.php';
 
+$requete = $pdo->query(
+    'SELECT id_tache as id, titre, priorite, statut as terminee FROM taches'
+);
+$taches = $requete->fetchAll();
+
 $titrePage = 'Ma liste de tâches';
 $total = count($taches);
 $restantes = compterTachesRestantes($taches);
