@@ -2,6 +2,7 @@
 // __DIR__ désigne le dossier de ce fichier, quel que soit le dossier de lancement.
 require __DIR__ . '/donnees.php';
 require __DIR__ . '/fonctions.php';
+require __DIR__ . '/connexion.php';
 
 $titrePage = 'Ma liste de tâches';
 $total = count($taches);
