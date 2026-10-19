@@ -23,6 +23,14 @@ include __DIR__ . '/includes/entete.php';
     <div><strong><?= $terminees ?></strong><span>Terminées</span></div>
 </section>
 
+<section class="filtres">
+    <ul>
+        <li><a href="toutes-les-taches">Toutes les tâches</a></li>
+        <li><a href="a-faire">A faire</a></li>
+        <li><a href="terminee">Terminee</a></li>
+    </ul>
+</section>
+
 <section class="liste" aria-labelledby="titre-liste">
     <h2 id="titre-liste">Mes tâches</h2>
     <?php if (empty($taches)): ?>

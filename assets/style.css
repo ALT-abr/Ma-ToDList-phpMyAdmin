@@ -22,6 +22,20 @@ h3 { margin: 0 0 6px; font-size: 1rem; }
 footer { margin-top: 24px; font-size: .9rem; }
 code { background: #e4e9f2; padding: 2px 5px; border-radius: 4px; }
 
+.filtres{
+    padding: 20px;
+}
+
+.filtres ul{
+    display: flex;
+    gap: 10px;
+    list-style: none;
+}
+
+.filtres ul li{
+    color: #236448;
+}
+
 .formulaire {
     background: #fff; 
     border: 1px solid #dce3ef; 
