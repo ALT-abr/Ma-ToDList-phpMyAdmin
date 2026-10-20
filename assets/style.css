@@ -22,6 +22,33 @@ h3 { margin: 0 0 6px; font-size: 1rem; }
 footer { margin-top: 24px; font-size: .9rem; }
 code { background: #e4e9f2; padding: 2px 5px; border-radius: 4px; }
 
+.modeAffichage{
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+    justify-content:flex-end;
+}
+
+.modeAffichage div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    padding: 10px;
+}
+
+.sun{
+    background-color: gold;
+    color: #ffffff;
+}
+
+.moon{
+    background-color: rgb(62, 62, 61);
+    color: #ffffff;
+}
+
 .filtres{
     padding: 20px;
 }
