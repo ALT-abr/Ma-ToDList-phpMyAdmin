@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require __DIR__ . '/connexion.php';
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST'){
@@ -23,7 +24,11 @@
             'priorite' => $priorite
         ]);
 
+        $_SESSION['message'] = 'OUI OUI c\'est bon/bonne :)';
+
         header('Location: index.php');
         exit;
     }
+
+
 ?>

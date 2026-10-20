@@ -7,12 +7,18 @@
     <title><?= echapper($titrePage) ?></title>
     <link rel="stylesheet" href="assets/style.css">
 </head>
-<body>
+<body class="theme-<?= $theme ?>">
 <main class="conteneur">
     <header>
         <div class="modeAffichage">
-            <div class="sun"><i class="fa-solid fa-sun"></i></div>
-            <div class="moon"><i class="fa-regular fa-moon"></i></div>
+            <form action="theme.php" method="post">
+                <label for="theme">Choisir un thème :</label>
+                <select name="theme" id="theme">
+                    <option value="clair">Claire</option>
+                    <option value="sombre">Sombre</option>
+                </select>
+                <button type="submit">oui</button>
+            </form>
         </div>
         
         <p class="sur-titre">MON PREMIER PROJET PHP</p>

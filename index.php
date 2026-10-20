@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // __DIR__ désigne le dossier de ce fichier, quel que soit le dossier de lancement.
 require __DIR__ . '/donnees.php';
 require __DIR__ . '/fonctions.php';
@@ -14,8 +16,21 @@ $total = count($taches);
 $restantes = compterTachesRestantes($taches);
 $terminees = $total - $restantes;
 
+$message = $_SESSION['message'] ?? '';
+unset($_SESSION['message']);
+
+$theme = $_COOKIE['theme'] ?? 'clair';
+
+if ($theme !== 'clair' && $theme !== 'sombre') {
+    $theme = 'clair';
+}
+
 include __DIR__ . '/includes/entete.php';
 ?>
+
+<?php if ($message !== ''): ?>
+    <p class="message"><?= echapper($message) ?></p>
+<?php endif; ?>
 
 <section class="statistiques" aria-label="Résumé des tâches">
     <div><strong><?= $total ?></strong><span>Au total</span></div>
@@ -25,9 +40,9 @@ include __DIR__ . '/includes/entete.php';
 
 <section class="filtres">
     <ul>
-        <li><a href="toutes-les-taches">Toutes les tâches</a></li>
-        <li><a href="a-faire">A faire</a></li>
-        <li><a href="terminee">Terminee</a></li>
+        <li><a href="index.php?etat=toutes-les-taches">Toutes les tâches</a></li>
+        <li><a href="index.php?etat=a-faire">A faire</a></li>
+        <li><a href="index.php?etat=terminee">Terminee</a></li>
     </ul>
 </section>
 
